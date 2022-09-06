@@ -1,0 +1,43 @@
+
+<h1>Calculadora {{title}}</h1>
+
+<div id="calc" class="container col-6 mt-5">
+  <div class="row mt-4 justify-content-center">
+      <input class="col-11 py-3" id="pantalla" type="text" value="{{pantalla}}">
+  </div>
+  <div class="row justify-content-center mt-3">
+      <button class="col-2 mx-3 py-1" (click)="retr()">Retr</button>
+      <button class="col-2 mx-3" (click)="ce()">CE</button>
+      <button class="col-2 mx-3" (click)="clr()">C</button>
+  </div>
+  <div class="row justify-content-center mt-3">
+      <button class="col-2 mx-1 py-3 number" (click)="numberFunction(7)">7</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(8)">8</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(9)">9</button>
+      <button class="col-2 mx-1" (click)="operation2num('/')">/</button>
+      <button class="col-2 mx-1" (click)="raiz()">Raiz</button>
+  </div>
+  <div class="row justify-content-center mt-3">
+      <button class="col-2 mx-1 py-3 number" (click)="numberFunction(4)">4</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(5)">5</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(6)">6</button>
+      <button class="col-2 mx-1" (click)="operation2num('*')">*</button>
+      <button class="col-2 mx-1" (click)="porcentaje()">%</button>
+  </div>
+  <div class="row justify-content-center mt-3">
+      <button class="col-2 mx-1 py-3 number" (click)="numberFunction(1)">1</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(2)">2</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(3)">3</button>
+      <button class="col-2 mx-1" (click)="operation2num('-')">-</button>
+      <button class="col-2 mx-1" (click)="unoEntre()">1/x</button>
+  </div>
+  <div class="row justify-content-center mt-3 mb-4">
+      <button class="col-2 mx-1 py-3 number" (click)="polaridad()">+/-</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction(7)">0</button>
+      <button class="col-2 mx-1 number" (click)="numberFunction('.')">.</button>
+      <button class="col-2 mx-1" (click)="operation2num('+')">+</button>
+      <button class="col-2 mx-1 equal" (click)="calc()">=</button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
